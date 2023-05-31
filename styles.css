@@ -2,29 +2,10 @@
     text-align: center;
   }
   
-  /* .book-line {
-    display: flex;
-    gap: 6px;
-  } */
-  
-  /* .remove {
-    margin: 6px 6px 6px auto;
-    cursor: pointer;
-    background-color: rgb(189, 185, 185);
-    border: none;
-    color: black;
-    font-weight: bold;
-    font-size: small;
-    border-radius: 8px;
-  } */
   
   .list-of-books {
     border: 2px solid black;
   }
-  
-  /* .list-of-books .book-line:nth-child(odd) {
-    background-color: #ddd;
-  } */
   
   hr {
     width: 40%;
