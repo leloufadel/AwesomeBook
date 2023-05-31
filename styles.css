@@ -1,0 +1,72 @@
+.heading {
+    text-align: center;
+  }
+  
+  /* .book-line {
+    display: flex;
+    gap: 6px;
+  } */
+  
+  /* .remove {
+    margin: 6px 6px 6px auto;
+    cursor: pointer;
+    background-color: rgb(189, 185, 185);
+    border: none;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+    border-radius: 8px;
+  } */
+  
+  .list-of-books {
+    border: 2px solid black;
+  }
+  
+  /* .list-of-books .book-line:nth-child(odd) {
+    background-color: #ddd;
+  } */
+  
+  hr {
+    width: 40%;
+    border: 2px solid black;
+    margin-top: 20px;
+  }
+  
+  p {
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.34rem;
+  }
+  
+  #form > h3 {
+    font-size: xx-large;
+  }
+  
+  #form > input {
+    width: 350px;
+    height: 35px;
+    border: 2px solid black;
+    font-size: large;
+  }
+  
+  #form > input::placeholder {
+    font-size: large;
+    padding-left: 10px;
+    color: black;
+  }
+  
+  #form > button {
+    margin-left: 302px;
+    font-size: large;
+    background: none;
+    padding: 4px 10px;
+    border: 2px solid black;
+  }
+  
