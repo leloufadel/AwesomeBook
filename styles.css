@@ -2,15 +2,15 @@
   text-align: center;
 }
 
-.list-of-books {
+.books-of-list {
   border: 2px solid black;
-}
+} 
 
-hr {
+/* hr {
   width: 40%;
   border: 2px solid black;
   margin-top: 20px;
-}
+} */
 
 p {
   font-weight: bold;
@@ -27,6 +27,13 @@ p {
 
 #form > h3 {
   font-size: xx-large;
+}
+.book-line {
+  display: flex;
+  gap: 6px;
+}
+.books-of-list .book-line:nth-child(odd) {
+  background-color: #ddd;
 }
 
 #form > input {
@@ -49,3 +56,12 @@ p {
   padding: 4px 10px;
   border: 2px solid black;
 }
+/* .remove {
+  margin:1rem 2rem 1rem auto;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 6px;
+} */
