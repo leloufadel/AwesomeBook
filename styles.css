@@ -1,53 +1,51 @@
 .heading {
-    text-align: center;
-  }
-  
-  
-  .list-of-books {
-    border: 2px solid black;
-  }
-  
-  hr {
-    width: 40%;
-    border: 2px solid black;
-    margin-top: 20px;
-  }
-  
-  p {
-    font-weight: bold;
-    font-size: medium;
-  }
-  
-  #form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.34rem;
-  }
-  
-  #form > h3 {
-    font-size: xx-large;
-  }
-  
-  #form > input {
-    width: 350px;
-    height: 35px;
-    border: 2px solid black;
-    font-size: large;
-  }
-  
-  #form > input::placeholder {
-    font-size: large;
-    padding-left: 10px;
-    color: black;
-  }
-  
-  #form > button {
-    margin-left: 302px;
-    font-size: large;
-    background: none;
-    padding: 4px 10px;
-    border: 2px solid black;
-  }
-  
+  text-align: center;
+}
+
+.list-of-books {
+  border: 2px solid black;
+}
+
+hr {
+  width: 40%;
+  border: 2px solid black;
+  margin-top: 20px;
+}
+
+p {
+  font-weight: bold;
+  font-size: medium;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.34rem;
+}
+
+#form > h3 {
+  font-size: xx-large;
+}
+
+#form > input {
+  width: 350px;
+  height: 35px;
+  border: 2px solid black;
+  font-size: large;
+}
+
+#form > input::placeholder {
+  font-size: large;
+  padding-left: 10px;
+  color: black;
+}
+
+#form > button {
+  margin-left: 302px;
+  font-size: large;
+  background: none;
+  padding: 4px 10px;
+  border: 2px solid black;
+}

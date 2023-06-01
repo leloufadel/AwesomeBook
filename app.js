@@ -1,31 +1,67 @@
-// Get the elements from the DOM
-const form = document.getElementById('form');
-const titleInput = document.querySelector('.title');
-const authorInput = document.querySelector('.author');
-const bookList = document.querySelector('.books-of-list');
+if (localStorage.getItem('Added Books') == null) {
+  localStorage.setItem('Added Books', JSON.stringify([]));
+}
 
-// Retrieve the books from localStorage or initialize an empty array
-let books = JSON.parse(localStorage.getItem('books')) || [];
+class BooksCollection {
+  constructor() {
+    this.books = JSON.parse(localStorage.getItem('Added Books'));
+  }
 
-// Function to display all books in the collection
-function displayBooks() {
-    bookList.innerHTML = '';
-    books.forEach((book, index) => {
-      const listItem = document.createElement('p');
-      listItem.textContent = `${book.title} - ${book.author}`;
-    
-      // Create a remove button for each book
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
-      removeButton.classList.add('remove');
-  
-      // Add an event listener to remove the book when the remove button is clicked
-      removeButton.addEventListener('click', () => {
-        removeBook(index);
-      });
-      listItem.appendChild(removeButton);
-      bookList.appendChild(listItem);
+  updatelocalStorage() {
+    localStorage.setItem('Added Books', JSON.stringify(this.books));
+  }
+
+  /* eslint-disable class-methods-use-this */
+  createBooks(arr) {
+    let books = '';
+    for (let i = 0; i < arr.length; i += 1) {
+      arr[i].id = i;
+      books += `<div class="book-line"><p>"${arr[i].title}"</p>
+      <p>${arr[i].author}</p>
+      <button class="remove" onclick="booksCollection.removeBook(${i})">Remove</button>
+      </div>`;
+    }
+    return books;
+  }
+
+  /* eslint-enable class-methods-use-this */
+  displayBooks() {
+    const container = document.querySelector('.books-of-list');
+    container.innerHTML = this.createBooks(this.books);
+  }
+
+  addNewBook(title, author) {
+    const id = this.books.length;
+    const book = {
+      id,
+      title,
+      author,
+    };
+    this.books.push(book);
+    this.updatelocalStorage();
+    this.displayBooks();
+    document.querySelector('.title').value = '';
+    document.querySelector('.author').value = '';
+  }
+
+  removeBook(id) {
+    this.books = this.books.filter((el) => el.id !== id);
+    this.updatelocalStorage();
+    this.displayBooks();
+  }
+
+  init() {
+    const form = document.querySelector('#form');
+    form.addEventListener('submit', (e) => {
+      const title = document.querySelector('.title');
+      const author = document.querySelector('.author');
+      e.preventDefault();
+      this.addNewBook(title.value, author.value);
     });
   }
-  
-  
+}
+
+const booksCollection = new BooksCollection();
+
+booksCollection.init();
+booksCollection.displayBooks();
