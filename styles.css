@@ -1,5 +1,36 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .heading {
   text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav .navigation {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.navigation > a:not(:last-child) {
+  border-right: 2px solid black;
+  padding-right: 7px;
 }
 
 .books-of-list {
@@ -61,4 +92,25 @@ p {
   font-weight: bold;
   font-size: 0.8rem;
   border-radius: 6px;
+}
+
+.hide {
+  display: none;
+}
+
+.show-books {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer > p {
+  border: 1px solid black;
+  padding: 6px;
 }

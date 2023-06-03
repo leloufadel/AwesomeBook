@@ -65,3 +65,24 @@ const booksCollection = new BooksCollection();
 
 booksCollection.init();
 booksCollection.displayBooks();
+const listButton = document.querySelector('.booklist');
+const addNewButton = document.querySelector('.addition');
+const contactButton = document.querySelector('.contact');
+const awesomeBooksSection = document.querySelector('.show-books');
+const addNewSection = document.querySelector('.add-newbook');
+const contactInfo = document.querySelector('.contact-info');
+listButton.addEventListener('click', () => {
+  awesomeBooksSection.classList.add('show');
+  addNewSection.classList.add('hide');
+  contactInfo.classList.add('hide');
+});
+addNewButton.addEventListener('click', () => {
+  addNewSection.classList.remove('hide');
+  awesomeBooksSection.classList.remove('show');
+  contactInfo.classList.add('hide');
+});
+contactButton.addEventListener('click', () => {
+  contactInfo.classList.remove('hide');
+  awesomeBooksSection.classList.remove('show');
+  addNewSection.classList.add('hide');
+});
