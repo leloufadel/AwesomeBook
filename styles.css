@@ -3,9 +3,18 @@ body {
   display: flex;
   flex-direction: column;
 }
+#header {
+  display: flex;
+  flex-direction: column;
+}
+#time {
+  margin-top: 10px;
+  margin-left: 86%;
+}
+
 
 .heading {
-  text-align: center;
+  margin-top: 10px;
 }
 
 .nav {

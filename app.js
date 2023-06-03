@@ -87,3 +87,16 @@ contactButton.addEventListener('click', () => {
   awesomeBooksSection.classList.remove('show');
   addNewSection.classList.add('hide');
 });
+
+function startTime() {
+  /* eslint-disable */
+  const { DateTime } = luxon;
+  /* eslint-enable */
+  const time = DateTime.now().setZone('Europe/Paris');
+  const now = time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+
+  document.getElementById('time').innerHTML = now;
+  setTimeout(startTime, 1000);
+}
+
+startTime();
