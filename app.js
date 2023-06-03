@@ -65,6 +65,7 @@ const booksCollection = new BooksCollection();
 
 booksCollection.init();
 booksCollection.displayBooks();
+
 const listButton = document.querySelector('.booklist');
 const addNewButton = document.querySelector('.addition');
 const contactButton = document.querySelector('.contact');
