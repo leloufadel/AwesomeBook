@@ -37,9 +37,7 @@ contactButton.addEventListener('click', () => {
 });
 
 function startTime() {
-
   document.getElementById('time').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
-  
 }
 
 startTime();
