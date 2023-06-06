@@ -37,15 +37,9 @@ contactButton.addEventListener('click', () => {
 });
 
 function startTime() {
-  // /* eslint-disable */
-  // //const { DateTime } = luxon;
-
-  // /* eslint-enable */
-  // // const time = DateTime.now().setZone('Europe/Paris');
-  // // const now = time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 
   document.getElementById('time').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
-  // setTimeout(startTime, 1000);
+  
 }
 
 startTime();
