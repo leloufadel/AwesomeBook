@@ -1,5 +1,5 @@
-import BooksCollection from './Modules/functions.js';
-import { DateTime } from './node_modules/luxon/src/luxon.js';
+// import BooksCollection from './Modules/functions.js';
+// import { DateTime } from './node_modules/luxon/src/luxon.js';
 
 if (localStorage.getItem('Added Books') == null) {
   localStorage.setItem('Added Books', JSON.stringify([]));
@@ -37,14 +37,14 @@ contactButton.addEventListener('click', () => {
 });
 
 function startTime() {
-  /* eslint-disable */
-  //const { DateTime } = luxon;
+  // /* eslint-disable */
+  // //const { DateTime } = luxon;
 
-  /* eslint-enable */
-  // const time = DateTime.now().setZone('Europe/Paris');
-  // const now = time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
+  // /* eslint-enable */
+  // // const time = DateTime.now().setZone('Europe/Paris');
+  // // const now = time.toLocaleString(DateTime.DATETIME_MED_WITH_SECONDS);
 
-  document.getElementById('time').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+  //document.getElementById('time').innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
   // setTimeout(startTime, 1000);
 }
 

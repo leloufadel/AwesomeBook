@@ -1,24 +1,24 @@
-export default class BooksCollection {
-  constructor() {
-    this.books = JSON.parse(localStorage.getItem('Added Books'));
-  }
+// export default class BooksCollection {
+//   constructor() {
+//     this.books = JSON.parse(localStorage.getItem('Added Books'));
+//   }
 
   updatelocalStorage() {
     localStorage.setItem('Added Books', JSON.stringify(this.books));
   }
 
   /* eslint-disable class-methods-use-this */
-  createBooks(arr) {
-    let books = '';
-    for (let i = 0; i < arr.length; i += 1) {
-      arr[i].id = i;
-      books += `<div class="book-line"><p>"${arr[i].title}"</p>
-          <p>${arr[i].author}</p>
-          <button class="remove" id="${i}">Remove</button>
-          </div>`;
-    }
-    return books;
-  }
+//   createBooks(arr) {
+//     let books = '';
+//     for (let i = 0; i < arr.length; i += 1) {
+//       arr[i].id = i;
+//       books += `<div class="book-line"><p>"${arr[i].title}"</p>
+//           <p>${arr[i].author}</p>
+//           <button class="remove" id="${i}">Remove</button>
+//           </div>`;
+//     }
+//     return books;
+//   }
 
   /* eslint-enable class-methods-use-this */
   displayBooks() {
