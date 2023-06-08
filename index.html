@@ -4,20 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer type="module"></script>
     <title>Awesome Books Website</title>
   </head>
+  <header id="header">
+    <nav class="nav">
+      <a href="#">Awesome Books</a>
+      <div class="navigation">
+        <a class="booklist" href="#">List</a>
+        <a class="addition" href="#">Add new</a>
+        <a class="contact" href="#">Contact</a>
+      </div>
+    </nav>
+    <div id="time"></div>
+  </header>
   <body>
+
     <main>
-      <h1 class="heading">All Awesome Books</h1>
-      <article class="books-of-list"></article>
-      <form id="form" action="#" method="post">
-        <h3 class="addbook">Add a new book</h3>
-        <input type="text" placeholder="Title" class="title" />
-        <input type="text" placeholder="Author" class="author" />
-        <button type="submit">Add</button>
-      </form>
+      <section class="show-books">
+        <h1 class="heading">All Awesome Books</h1>
+        <article class="books-of-list"></article>
+      </section>
+      <section class="add-newbook hide">
+        <form id="form" action="#" method="post">
+          <h1>Add a new book</h1>
+          <input type="text" placeholder="Title" class="title" />
+          <input type="text" placeholder="Author" class="author" />
+          <button type="submit">Add</button>
+        </form>
+      </section>
+      <section class="contact-info hide">
+        <h1>Contact information</h1>
+        <p>
+          Do have any questions or you just want to say "Hello"?<br />You can
+          reach out to us!
+        </p>
+        <ul>
+          <li>Our e-mail: mail@mail.com</li>
+          <li>Our phone number: 0043586534422</li>
+          <li>Our address: Streetname 22, 84503 City, Country</li>
+        </ul>
+      </section>
     </main>
+    <footer>
+      <p>Copyright ...</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js" crossorigin="anonymous"></script>
   </body>
 </html>

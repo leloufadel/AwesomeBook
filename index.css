@@ -1,0 +1,135 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+}
+
+#time {
+  margin-top: 10px;
+  margin-left: 86%;
+}
+
+.heading {
+  margin-top: 10px;
+  margin-left: 40%;
+}
+
+.contact-info {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav .navigation {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.navigation > a:not(:last-child) {
+  border-right: 2px solid black;
+  padding-right: 7px;
+}
+
+.books-of-list {
+  border: 2px solid black;
+}
+
+p {
+  font-weight: bold;
+  font-size: medium;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.34rem;
+}
+
+#form > h3 {
+  font-size: xx-large;
+}
+
+.book-line {
+  display: flex;
+  gap: 6px;
+}
+
+.books-of-list .book-line:nth-child(odd) {
+  background-color: #ddd;
+}
+
+#form > input {
+  width: 350px;
+  height: 35px;
+  border: 2px solid black;
+  font-size: large;
+}
+
+#form > input::placeholder {
+  font-size: large;
+  padding-left: 10px;
+  color: black;
+}
+
+#form > button {
+  margin-left: 302px;
+  font-size: large;
+  background: none;
+  padding: 4px 10px;
+  border: 2px solid black;
+}
+
+.remove {
+  margin: 1rem 2rem 1rem auto;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+.hide {
+  display: none;
+}
+
+.show-books {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer > p {
+  border: 1px solid black;
+  padding: 6px;
+}

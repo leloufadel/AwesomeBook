@@ -1,8 +1,4 @@
-if (localStorage.getItem('Added Books') == null) {
-  localStorage.setItem('Added Books', JSON.stringify([]));
-}
-
-class BooksCollection {
+export default class BooksCollection {
   constructor() {
     this.books = JSON.parse(localStorage.getItem('Added Books'));
   }
@@ -17,9 +13,9 @@ class BooksCollection {
     for (let i = 0; i < arr.length; i += 1) {
       arr[i].id = i;
       books += `<div class="book-line"><p>"${arr[i].title}"</p>
-      <p>${arr[i].author}</p>
-      <button class="remove" onclick="booksCollection.removeBook(${i})">Remove</button>
-      </div>`;
+          <p>${arr[i].author}</p>
+          <button class="remove" id="${i}">Remove</button>
+          </div>`;
     }
     return books;
   }
@@ -60,8 +56,3 @@ class BooksCollection {
     });
   }
 }
-
-const booksCollection = new BooksCollection();
-
-booksCollection.init();
-booksCollection.displayBooks();
